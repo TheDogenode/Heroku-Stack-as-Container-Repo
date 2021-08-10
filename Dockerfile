@@ -7,6 +7,8 @@ WORKDIR /app
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Kolkata
 
+RUN df -h
+
 RUN apt -qq update && apt install -qq -y figlet
 
 CMD figlet -f big.flf HERO-KU
